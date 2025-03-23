@@ -1,0 +1,35 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/freepdb1</property>
+        <property name="hibernate.connection.username">test</property>
+        <property name="hibernate.connection.password">test</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="show_sql">true</property>
+
+<<<<<<< HEAD:Template/src/main/resources/hibernate.cfg.xml
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.JCacheRegionFactory</property>
+        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
+        <property name="enable_lazy_load_no_trans">true</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.javax.cache.missing_cache_strategy">create</property>
+
+        <mapping class="com.sci.models.Employee"/>
+        <mapping class="com.sci.models.Region"/>
+        <mapping class="com.sci.models.JobHistory"/>
+        <mapping class="com.sci.models.RoomType"/>
+        <mapping class="com.sci.models.Room"/>
+        <mapping class="com.sci.models.Guest"/>
+        <mapping class="com.sci.models.Booking"/>
+        <mapping class="com.sci.models.Price"/>
+        <mapping class="com.sci.models.Reservation"/>
+
+=======
+        <!--    <mapping class="package.ModelClassName" />-->
+        <mapping class="com.sci.models.Book"/>
+        <mapping class="com.sci.models.Author"/>
+        <mapping class="com.sci.models.Auth_Book"/>
+>>>>>>> 2761105d78135125d9e54ac15b7fdcf8d2ce19b0:Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml
+    </session-factory>
+</hibernate-configuration>
