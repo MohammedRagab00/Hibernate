@@ -4,11 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
-        <property name="hibernate.connection.username">c##MHBakr</property>
-        <property name="hibernate.connection.password">MohamedHedia123</property>
-        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@//localhost:1521/freepdb1</property>
+        <property name="connection.username">hr</property>
+        <property name="connection.password">hr</property>
+        <property name="dialect">org.hibernate.dialect.Oracle8iDialect</property>
         <property name="enable_lazy_load_no_trans">true</property>
         <property name="hibernate.cache.use_second_level_cache">true</property>
         <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
@@ -26,6 +26,5 @@
         <mapping class="com.sci.models.JobHistory"/>
         <mapping class="com.sci.models.Person"/>
         <mapping class="com.sci.models.Car"/>
-
     </session-factory>
 </hibernate-configuration>
