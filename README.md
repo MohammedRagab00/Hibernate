@@ -9,10 +9,8 @@ This repository contains materials and resources for working with Hibernate, PLS
 
 ## Key Guidelines
 
-1. **Creating Triggers**:
+**Creating Triggers**:
    - Avoid using the `SYS` schema to prevent errors. Use a default connection instead.
-2. **Recommended SDK**:
-   - Use **Oracle GraalVM Version 17** for optimal performance. Higher versions (e.g., SDK 19 or above) may cause compatibility issues.
 
 ## References
 
