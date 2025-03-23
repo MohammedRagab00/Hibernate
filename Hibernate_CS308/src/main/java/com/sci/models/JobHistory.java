@@ -2,13 +2,12 @@ package com.sci.models;
 
 import java.io.Serializable;
 import java.sql.Date;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(name = "Job_History")
 @Data
@@ -36,7 +35,7 @@ public class JobHistory implements Serializable {
     //One employee used to work many times:
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEE_ID", insertable = false, updatable = false)
-    private Department employee;
+    private Employee employee;
 
     //Many previous employees used to work in one department:
     @ManyToOne(fetch = FetchType.LAZY)

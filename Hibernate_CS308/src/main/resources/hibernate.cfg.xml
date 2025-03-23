@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-<hibernate-configuration>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+
     <session-factory>
-        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
-        <property name="connection.url">jdbc:oracle:thin:@//localhost:1521/freepdb1</property>
-        <property name="connection.username">hr</property>
-        <property name="connection.password">hr</property>
-        <property name="dialect">org.hibernate.dialect.Oracle8iDialect</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/freepdb1</property>
+        <property name="hibernate.connection.username">hr</property>
+        <property name="hibernate.connection.password">hr</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="show_sql">true</property>
+<!--        <property name="hibernate.use_sql_comments">true</property>-->
+
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.JCacheRegionFactory</property>
+        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
         <property name="enable_lazy_load_no_trans">true</property>
         <property name="hibernate.cache.use_second_level_cache">true</property>
-        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
-        </property>
+        <property name="hibernate.javax.cache.missing_cache_strategy">create</property>
 
-        <property name="show_sql">true</property>
-
-        <!--    <mapping class="package.ModelClassName" />-->
         <mapping class="com.sci.models.Employee"/>
         <mapping class="com.sci.models.Department"/>
         <mapping class="com.sci.models.Location"/>
@@ -24,7 +22,9 @@
         <mapping class="com.sci.models.Country"/>
         <mapping class="com.sci.models.Job"/>
         <mapping class="com.sci.models.JobHistory"/>
+<!--
         <mapping class="com.sci.models.Person"/>
         <mapping class="com.sci.models.Car"/>
+-->
     </session-factory>
 </hibernate-configuration>

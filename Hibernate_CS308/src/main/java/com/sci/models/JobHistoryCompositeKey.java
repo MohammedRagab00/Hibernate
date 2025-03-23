@@ -1,9 +1,7 @@
 package com.sci.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import java.io.Serializable;
 import java.sql.Date;
 //Composite key class:
@@ -11,6 +9,7 @@ import java.sql.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class JobHistoryCompositeKey implements Serializable {
     private static final long serialVersionUID = -7519983781399232210L;
 

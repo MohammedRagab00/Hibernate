@@ -2,7 +2,7 @@ package com.sci.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(name = "Countries")
 @Data
@@ -24,7 +23,7 @@ public class Country implements Serializable {
     private static final long serialVersionUID = -4275743947797911430L;
 
     @Id
-    @Column(name = "COUNTRY_ID")
+    @Column(name = "COUNTRY_ID", columnDefinition = "CHAR(2)")
     private String countryId;
     @Column(name = "COUNTRY_NAME")
     private String countryName;
