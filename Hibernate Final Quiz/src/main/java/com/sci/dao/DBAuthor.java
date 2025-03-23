@@ -1,17 +1,18 @@
 package com.sci.dao;
+
 import com.sci.models.Author;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import java.util.List;
 
-@SuppressWarnings({"unchecked"})
+//@SuppressWarnings({"unchecked"})
 public class DBAuthor {
     public List<Author> get() {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Author ").list();
+            return session.createQuery("FROM Author", Author.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -43,7 +44,8 @@ public class DBAuthor {
 
             transaction = session.beginTransaction();
 
-            authId = (Integer) session.save(author);
+            session.persist(author);
+            authId = author.getId();
 
             transaction.commit();
 

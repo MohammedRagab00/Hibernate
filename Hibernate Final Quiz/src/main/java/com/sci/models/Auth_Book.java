@@ -1,5 +1,6 @@
 package com.sci.models;
 
+import java.io.Serial;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 public class Auth_Book implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 21L;
 
     @Id

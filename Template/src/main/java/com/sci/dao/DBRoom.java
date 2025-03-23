@@ -2,7 +2,7 @@ package com.sci.dao;
 
 
 import com.sci.criteria.FilterQuery;
-import com.sci.models.Book;
+import com.sci.models.Room;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -16,14 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class DBBook {
-    public List<Book> getByFilter(List<FilterQuery> filterQueries) {
+public class DBRoom {
+    public List<Room> getByFilter(List<FilterQuery> filterQueries) {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
-            CriteriaQuery<Book> cr = cb.createQuery(Book.class);
-            Root<Book> root = cr.from(Book.class);
+            CriteriaQuery<Room> cr = cb.createQuery(Room.class);
+            Root<Room> root = cr.from(Room.class);
 
             Predicate[] predicates = new Predicate[filterQueries.size()];
             for (int i = 0; i < filterQueries.size(); i++) {
@@ -109,7 +109,7 @@ public class DBBook {
             //This is their default, We need a more complex query
             cr.select(root).where(predicates);
 
-            Query<Book> query = session.createQuery(cr);
+            Query<Room> query = session.createQuery(cr);
             return query.getResultList();
 
         } catch (Exception ex) {
@@ -119,23 +119,11 @@ public class DBBook {
         return new ArrayList<>();
     }
 
-    public List<Book> get() {
+    public List<Room> get() {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            return session.createQuery("FROM Book", Book.class).getResultList();
-        } catch (Exception ex) {
-            System.err.println(ex.getMessage());
-        }
-
-        return null;
-    }
-
-    public Book read(Integer bookId) {
-
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
-
-            return session.get(Book.class, bookId);
+            return session.createQuery("FROM Room", Room.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -144,18 +132,31 @@ public class DBBook {
         return null;
     }
 
+    public Room read(String roomNumber) {
 
-    public Integer create(Book book) {
+        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+
+            return session.get(Room.class, roomNumber);
+
+        } catch (Exception ex) {
+            System.err.println(ex.getMessage());
+        }
+
+        return null;
+    }
+
+
+    public String create(Room room) {
 
         Transaction transaction = null;
-        Integer bookId = null;
+        String roomNumber = null;
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
             transaction = session.beginTransaction();
 
-            session.persist(book);
-            bookId = book.getId();
+            session.persist(room);
+            roomNumber = room.getRoomNumber();
 
             transaction.commit();
 
@@ -166,6 +167,49 @@ public class DBBook {
             System.err.println(ex.getMessage());
         }
 
-        return bookId;
+        return roomNumber;
     }
+
+    public void update(Room room) {
+
+        Transaction transaction = null;
+
+        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+
+            transaction = session.beginTransaction();
+
+            session.merge(room);
+
+            transaction.commit();
+
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            System.err.println(ex.getMessage());
+        }
+    }
+
+    public void delete(String roomNumber) {
+
+        Transaction transaction = null;
+
+        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+
+            transaction = session.beginTransaction();
+
+            Room room = read(roomNumber);
+
+            session.remove(room);
+
+            transaction.commit();
+
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            System.err.println(ex.getMessage());
+        }
+    }
+
 }

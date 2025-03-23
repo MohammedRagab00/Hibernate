@@ -1,8 +1,6 @@
 package com.sci.models;
 
-import java.io.Serial;
 import java.io.Serializable;
-import java.sql.Date;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,23 +10,21 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
-@Table(name = "BOOK")
+@Table(name = "Regions")
 @Data
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Book implements Serializable {
+public class Region implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 21L;
+    private static final long serialVersionUID = 6596828837219242458L;
 
     @Id
-    @Column(name = "id")
-    private Integer id;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "published_at")
-    private Date publishedAt;
+    @Column(name = "REGION_ID")
+    private Integer regionId;
+    @Column(name = "REGION_NAME")
+    private String regionName;
+
 }

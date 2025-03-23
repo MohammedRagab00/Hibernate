@@ -1,8 +1,25 @@
-# Les = Oracle Slides Lessons, Some lessons might want a table to show the data but I've printed them instead (Simple adjustment needed).
-# Tasks for Group 2 / PLSQL Problems on FB Group: https://web.facebook.com/groups/1129274145098618
-# When creating triggers: don't use "SYS" schema... to avoid errors (use a default connection).
-# Working with Hibernate; Recommended SDK (Higher than 19 might cause errors): Oracle GraalVM Version 17.
-# Dr. Abdelghany Referenced Repo: https://github.com/abdelghanycu/CS308Spring2022
-# In Hibernate Final Quiz: 2 tables were requested to be created; hence the file HibernateSchema.sql
-# Video For Hibernate Issues: https://drive.google.com/file/d/1xkIdPFiAOrsEnPIavQOpwcz0siVOHOD4/view
-# Video For Hibernate Recap: https://drive.google.com/file/d/1cuxpz5oGpa1iJUYyJE_Q-4Fy4bb8w_GF/view?usp=drive_link
+# Hibernate Project
+
+This repository contains materials and resources for working with Hibernate, PLSQL, and related tasks. Below are details and references to guide your work and enhance understanding.
+
+## Lessons and Resources
+
+- **Oracle Slides Lessons (Les)**: While some lessons were printed instead of presented in tables, a simple adjustment could convert them into tabular data as needed.
+- **Group 2 Tasks**: Explore PLSQL problems shared on the [Facebook Group](https://web.facebook.com/groups/1129274145098618).
+
+## Key Guidelines
+
+1. **Creating Triggers**:
+   - Avoid using the `SYS` schema to prevent errors. Use a default connection instead.
+2. **Recommended SDK**:
+   - Use **Oracle GraalVM Version 17** for optimal performance. Higher versions (e.g., SDK 19 or above) may cause compatibility issues.
+
+## References
+
+- **Referenced Repository**: [Dr. Abdelghany's CS308Spring2022 Repository](https://github.com/abdelghanycu/CS308Spring2022)
+- **Hibernate Final Quiz**: Includes a requirement to create two tables, implemented in the file `HibernateSchema.sql`.
+
+## Helpful Videos
+
+1. **Hibernate Issues**: Watch the [troubleshooting video](https://drive.google.com/file/d/1xkIdPFiAOrsEnPIavQOpwcz0siVOHOD4/view).
+2. **Hibernate Recap**: Review concepts with this [recap video](https://drive.google.com/file/d/1cuxpz5oGpa1iJUYyJE_Q-4Fy4bb8w_GF/view?usp=drive_link).

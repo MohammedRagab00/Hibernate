@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sci</groupId>
-    <artifactId>Hibernate Final Quiz</artifactId>
+    <artifactId>Template</artifactId>
     <version>1.0.0</version>
 
     <properties>

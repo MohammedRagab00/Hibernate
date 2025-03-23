@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f790fe17-1341-4539-be9f-940335e733c4" name="Changes" comment="" />
+    <list default="true" id="f790fe17-1341-4539-be9f-940335e733c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Template/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022 (1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022-master/CS308Spring2022.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/ERD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBAuthor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBAuthor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_BookCompositeKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_BookCompositeKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/TesterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/TesterApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/FilterQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/FilterQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/Operator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBAuthor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBAuthor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_BookCompositeKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_BookCompositeKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS308Spring2022.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/Template.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +59,12 @@
     &quot;assignee&quot;: &quot;MohammedRagab00&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MohammedRagab00/Hibernate.git",
-    "accountId": "e2a7df99-b5d8-4d67-b83b-3b2931fefe35"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MohammedRagab00/Hibernate.git&quot;,
+    &quot;accountId&quot;: &quot;e2a7df99-b5d8-4d67-b83b-3b2931fefe35&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -36,26 +76,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TesterApp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "N:/Study/Material/GradProject/myRepo/Hibernate/H.Bakr/Hibernate_CS308",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TesterApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/Study/Material/GradProject/myRepo/Hibernate/H.Bakr/Template&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="N:\Study\Material\GradProject\myRepo\Hibernate\H.Bakr\Hibernate_CS308" />
@@ -113,6 +154,8 @@
       <workItem from="1742726674197" duration="5852000" />
       <workItem from="1742732616758" duration="51000" />
       <workItem from="1742738233826" duration="4888000" />
+      <workItem from="1742745946198" duration="264000" />
+      <workItem from="1742747852969" duration="925000" />
     </task>
     <servers />
   </component>
