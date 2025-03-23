@@ -8,14 +8,13 @@ import org.hibernate.Transaction;
 import java.sql.Date;
 import java.util.List;
 
-public  class DBJobHistory {
+public class DBJobHistory {
 
     public List<JobHistory> get() {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM JobHistory").list();
+            return session.createQuery("FROM JobHistory", JobHistory.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -48,7 +47,8 @@ public  class DBJobHistory {
 
             transaction = session.beginTransaction();
 
-            key = (JobHistoryCompositeKey) session.save(jobHistory);
+            session.persist(jobHistory);
+            key = new JobHistoryCompositeKey(jobHistory.getEmployeeId(), jobHistory.getStartDate());
 
             transaction.commit();
 
@@ -70,7 +70,7 @@ public  class DBJobHistory {
 
             transaction = session.beginTransaction();
 
-            session.update(jobHistory);
+            session.merge(jobHistory);
 
             transaction.commit();
 
@@ -92,7 +92,7 @@ public  class DBJobHistory {
 
             JobHistory jobHistory = read(employeeId, date);
 
-            session.delete(jobHistory);
+            session.remove(jobHistory);
 
             transaction.commit();
 

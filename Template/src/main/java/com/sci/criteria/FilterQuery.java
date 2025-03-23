@@ -12,5 +12,4 @@ public class FilterQuery {
   private String attributeName;
   private Object attributeValue;
   private Operator op;
-//  private String type;// int double boolean
 }

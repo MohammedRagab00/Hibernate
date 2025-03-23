@@ -122,8 +122,7 @@ public class DBBooking {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Booking").getResultList();
+            return session.createQuery("FROM Booking", Booking.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -155,7 +154,8 @@ public class DBBooking {
 
             transaction = session.beginTransaction();
 
-            bookingNumber = (String) session.save(booking);
+            session.persist(booking);
+            bookingNumber = booking.getBookingNumber();
 
             transaction.commit();
 
@@ -177,7 +177,7 @@ public class DBBooking {
 
             transaction = session.beginTransaction();
 
-            session.update(booking);
+            session.merge(booking);
 
             transaction.commit();
 
@@ -199,7 +199,7 @@ public class DBBooking {
 
             Booking booking = read(bookingNumber);
 
-            session.delete(booking);
+            session.remove(booking);
 
             transaction.commit();
 

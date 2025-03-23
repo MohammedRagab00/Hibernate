@@ -122,8 +122,7 @@ public class DBGuest {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Guest ").list();
+            return session.createQuery("FROM Guest", Guest.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -155,7 +154,8 @@ public class DBGuest {
 
             transaction = session.beginTransaction();
 
-            guestId = (String) session.save(guest);
+            session.persist(guest);
+            guestId = guest.getGuestId();
 
             transaction.commit();
 
@@ -177,7 +177,7 @@ public class DBGuest {
 
             transaction = session.beginTransaction();
 
-            session.update(guest);
+            session.merge(guest);
 
             transaction.commit();
 
@@ -199,7 +199,7 @@ public class DBGuest {
 
             Guest guest = read(guestId);
 
-            session.delete(guest);
+            session.remove(guest);
 
             transaction.commit();
 

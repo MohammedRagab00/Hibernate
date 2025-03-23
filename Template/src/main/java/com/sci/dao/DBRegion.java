@@ -12,8 +12,7 @@ public class DBRegion {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Region").list();
+            return session.createQuery("FROM Region", Region.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -45,7 +44,8 @@ public class DBRegion {
 
             transaction = session.beginTransaction();
 
-            regionId = (Integer) session.save(region);
+            session.persist(region);
+            regionId = region.getRegionId();
 
             transaction.commit();
 
@@ -67,7 +67,7 @@ public class DBRegion {
 
             transaction = session.beginTransaction();
 
-            session.update(region);
+            session.merge(region);
 
             transaction.commit();
 
@@ -89,7 +89,7 @@ public class DBRegion {
 
             Region region = read(regionId);
 
-            session.delete(region);
+            session.remove(region);
 
             transaction.commit();
 

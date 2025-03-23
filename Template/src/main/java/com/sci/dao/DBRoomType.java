@@ -122,8 +122,7 @@ public class DBRoomType {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM RoomType ").list();
+            return session.createQuery("FROM RoomType", RoomType.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -155,7 +154,8 @@ public class DBRoomType {
 
             transaction = session.beginTransaction();
 
-            roomTypeId = (String) session.save(roomType);
+            session.persist(roomType);
+            roomTypeId = roomType.getRoomTypeId();
 
             transaction.commit();
 
@@ -177,7 +177,7 @@ public class DBRoomType {
 
             transaction = session.beginTransaction();
 
-            session.update(roomType);
+            session.merge(roomType);
 
             transaction.commit();
 
@@ -199,7 +199,7 @@ public class DBRoomType {
 
             RoomType roomType = read(roomTypeId);
 
-            session.delete(roomType);
+            session.remove(roomType);
 
             transaction.commit();
 
@@ -210,5 +210,4 @@ public class DBRoomType {
             System.err.println(ex.getMessage());
         }
     }
-
 }

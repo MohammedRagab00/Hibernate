@@ -123,8 +123,7 @@ public class DBPrice {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Price ").list();
+            return session.createQuery("FROM Price", Price.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -157,7 +156,8 @@ public class DBPrice {
 
             transaction = session.beginTransaction();
 
-            key = (PriceCompositeKey) session.save(price);
+            session.persist(price);
+            key = new PriceCompositeKey(price.getRoomNumber(), price.getSeason(), price.getWeekday());
 
             transaction.commit();
 
@@ -179,7 +179,7 @@ public class DBPrice {
 
             transaction = session.beginTransaction();
 
-            session.update(price);
+            session.merge(price);
 
             transaction.commit();
 
@@ -201,7 +201,7 @@ public class DBPrice {
 
             Price price = read(roomNumber, season, weekday);
 
-            session.delete(price);
+            session.remove(price);
 
             transaction.commit();
 

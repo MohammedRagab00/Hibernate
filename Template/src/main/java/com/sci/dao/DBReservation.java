@@ -124,7 +124,6 @@ public class DBReservation {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
             return session.createQuery("FROM Reservation", Reservation.class).getResultList();
 
         } catch (Exception ex) {
@@ -158,7 +157,8 @@ public class DBReservation {
 
             transaction = session.beginTransaction();
 
-            key = (ReservationCompositeKey) session.save(reservation);
+            session.persist(reservation);
+            key = new ReservationCompositeKey(reservation.getBookingNumber(), reservation.getRoomNumber(), reservation.getDateReserved());
 
             transaction.commit();
 
@@ -180,7 +180,7 @@ public class DBReservation {
 
             transaction = session.beginTransaction();
 
-            session.update(reservation);
+            session.merge(reservation);
 
             transaction.commit();
 
@@ -202,7 +202,7 @@ public class DBReservation {
 
             Reservation reservation = read(bookingNumber, roomNumber, dateReserved);
 
-            session.delete(reservation);
+            session.remove(reservation);
 
             transaction.commit();
 

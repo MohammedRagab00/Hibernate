@@ -122,8 +122,7 @@ public class DBEmployee {
 
         try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
 
-            //noinspection unchecked
-            return session.createQuery("FROM Employee").list();
+            return session.createQuery("FROM Employee", Employee.class).getResultList();
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
@@ -146,7 +145,7 @@ public class DBEmployee {
     }
 
 
-    public Integer create(Employee employee) {
+    public int create(Employee employee) {
 
         Transaction transaction = null;
         int employeeId = 0;
@@ -155,7 +154,8 @@ public class DBEmployee {
 
             transaction = session.beginTransaction();
 
-            employeeId = (Integer) session.save(employee);
+            session.persist(employee);
+            employeeId = employee.getEmployeeId();
 
             transaction.commit();
 
@@ -177,7 +177,7 @@ public class DBEmployee {
 
             transaction = session.beginTransaction();
 
-            session.update(employee);
+            session.merge(employee);
 
             transaction.commit();
 
@@ -199,7 +199,7 @@ public class DBEmployee {
 
             Employee employee = read(employeeId);
 
-            session.delete(employee);
+            session.remove(employee);
 
             transaction.commit();
 
