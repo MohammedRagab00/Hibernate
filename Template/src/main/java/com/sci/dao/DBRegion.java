@@ -10,7 +10,7 @@ public class DBRegion {
 
     public List<Region> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Region", Region.class).getResultList();
 
@@ -23,7 +23,7 @@ public class DBRegion {
 
     public Region read(Integer regionId) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Region.class, regionId);
 
@@ -40,7 +40,7 @@ public class DBRegion {
         Transaction transaction = null;
         int regionId = 0;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -63,7 +63,7 @@ public class DBRegion {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -83,7 +83,7 @@ public class DBRegion {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

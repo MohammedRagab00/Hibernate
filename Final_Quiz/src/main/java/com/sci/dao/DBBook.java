@@ -19,7 +19,7 @@ import java.util.List;
 public class DBBook {
     public List<Book> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Book> cr = cb.createQuery(Book.class);
@@ -121,7 +121,7 @@ public class DBBook {
 
     public List<Book> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Book", Book.class).getResultList();
         } catch (Exception ex) {
@@ -133,7 +133,7 @@ public class DBBook {
 
     public Book read(Integer bookId) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Book.class, bookId);
 
@@ -150,7 +150,7 @@ public class DBBook {
         Transaction transaction = null;
         Integer bookId = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

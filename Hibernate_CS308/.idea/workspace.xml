@@ -5,45 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f790fe17-1341-4539-be9f-940335e733c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Template/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022 (1).iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022-master/CS308Spring2022.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/CS308Spring2022.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/ERD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBAuthor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBAuthor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_BookCompositeKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_BookCompositeKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/TesterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/TesterApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/FilterQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/FilterQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/criteria/Operator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBAuthor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBAuthor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/dao/DBConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_BookCompositeKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Auth_BookCompositeKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/com/sci/models/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hibernate Final Quiz/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/HibernateSchema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/TesterApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/criteria/FilterQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/criteria/Operator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBAuthor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/dao/DBConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Auth_BookCompositeKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Author.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/java/com/sci/models/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hibernate Final Quiz/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS308Spring2022.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Template/Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/Template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sci/TesterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sci/TesterApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sci/dao/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sci/dao/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sci/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sci/dao/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/TesterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/TesterApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBGuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBGuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBJobHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBJobHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBReservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Template/src/main/java/com/sci/dao/DBRoomType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +85,13 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/Study/Material/GradProject/myRepo/Hibernate/H.Bakr/Template&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/Study/Material/GradProject/myRepo/Hibernate/H.Bakr/Final_Quiz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -155,7 +155,47 @@
       <workItem from="1742732616758" duration="51000" />
       <workItem from="1742738233826" duration="4888000" />
       <workItem from="1742745946198" duration="264000" />
-      <workItem from="1742747852969" duration="925000" />
+      <workItem from="1742747852969" duration="1589000" />
+      <workItem from="1742749915841" duration="862000" />
+      <workItem from="1742755177391" duration="11000" />
+      <workItem from="1742755506600" duration="2267000" />
+      <workItem from="1742803927069" duration="988000" />
+      <workItem from="1742832416812" duration="6000" />
+      <workItem from="1742832435068" duration="85000" />
+      <workItem from="1742833563025" duration="10000" />
+      <workItem from="1742912668776" duration="264000" />
+      <workItem from="1742979399879" duration="478000" />
+      <workItem from="1743323060600" duration="162000" />
+      <workItem from="1743323390988" duration="88000" />
+      <workItem from="1743337682400" duration="3000" />
+      <workItem from="1743513877405" duration="810000" />
+      <workItem from="1743518338841" duration="29000" />
+      <workItem from="1743586928182" duration="818000" />
+      <workItem from="1743592681894" duration="152000" />
+      <workItem from="1743594307219" duration="221000" />
+      <workItem from="1743764796642" duration="17000" />
+      <workItem from="1743774082164" duration="1535000" />
+      <workItem from="1743801789292" duration="453000" />
+      <workItem from="1743802603227" duration="57000" />
+      <workItem from="1743883954056" duration="250000" />
+      <workItem from="1743884268435" duration="12000" />
+      <workItem from="1743884685885" duration="38000" />
+      <workItem from="1744026263765" duration="675000" />
+      <workItem from="1744050350739" duration="189000" />
+      <workItem from="1744050936110" duration="175000" />
+      <workItem from="1744051268707" duration="1055000" />
+      <workItem from="1744061493433" duration="80000" />
+      <workItem from="1744096753181" duration="11000" />
+      <workItem from="1744104909374" duration="163000" />
+      <workItem from="1744114100244" duration="660000" />
+      <workItem from="1744115604051" duration="45000" />
+      <workItem from="1744115674223" duration="33000" />
+      <workItem from="1744117580687" duration="26000" />
+      <workItem from="1744611775146" duration="798000" />
+      <workItem from="1744625621586" duration="146000" />
+      <workItem from="1744625862872" duration="32000" />
+      <workItem from="1744625968498" duration="35000" />
+      <workItem from="1744626256199" duration="27000" />
     </task>
     <servers />
   </component>

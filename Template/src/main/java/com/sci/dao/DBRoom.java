@@ -19,7 +19,7 @@ import java.util.List;
 public class DBRoom {
     public List<Room> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Room> cr = cb.createQuery(Room.class);
@@ -121,7 +121,7 @@ public class DBRoom {
 
     public List<Room> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Room", Room.class).getResultList();
 
@@ -134,7 +134,7 @@ public class DBRoom {
 
     public Room read(String roomNumber) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Room.class, roomNumber);
 
@@ -151,7 +151,7 @@ public class DBRoom {
         Transaction transaction = null;
         String roomNumber = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -174,7 +174,7 @@ public class DBRoom {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -194,7 +194,7 @@ public class DBRoom {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

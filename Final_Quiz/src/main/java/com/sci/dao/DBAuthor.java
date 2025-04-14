@@ -6,11 +6,10 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-//@SuppressWarnings({"unchecked"})
 public class DBAuthor {
     public List<Author> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Author", Author.class).getResultList();
 
@@ -23,7 +22,7 @@ public class DBAuthor {
 
     public Author read(Integer authId) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Author.class, authId);
 
@@ -40,7 +39,7 @@ public class DBAuthor {
         Transaction transaction = null;
         Integer authId = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

@@ -20,7 +20,7 @@ import java.util.List;
 public class DBReservation {
     public List<Reservation> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Reservation> cr = cb.createQuery(Reservation.class);
@@ -122,7 +122,7 @@ public class DBReservation {
 
     public List<Reservation> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Reservation", Reservation.class).getResultList();
 
@@ -136,7 +136,7 @@ public class DBReservation {
     public Reservation read(String bookingNumber, String roomNumber, Date dateReserved) {
         ReservationCompositeKey key = new ReservationCompositeKey(bookingNumber, roomNumber, dateReserved);
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Reservation.class, key);
 
@@ -153,7 +153,7 @@ public class DBReservation {
         Transaction transaction = null;
         ReservationCompositeKey key = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -176,7 +176,7 @@ public class DBReservation {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -196,7 +196,7 @@ public class DBReservation {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

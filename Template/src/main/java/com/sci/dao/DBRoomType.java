@@ -18,7 +18,7 @@ import java.util.List;
 public class DBRoomType {
     public List<RoomType> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<RoomType> cr = cb.createQuery(RoomType.class);
@@ -120,7 +120,7 @@ public class DBRoomType {
 
     public List<RoomType> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM RoomType", RoomType.class).getResultList();
 
@@ -133,7 +133,7 @@ public class DBRoomType {
 
     public RoomType read(String roomTypeId) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(RoomType.class, roomTypeId);
 
@@ -150,7 +150,7 @@ public class DBRoomType {
         Transaction transaction = null;
         String roomTypeId = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -173,7 +173,7 @@ public class DBRoomType {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -193,7 +193,7 @@ public class DBRoomType {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

@@ -12,7 +12,7 @@ public class DBJobHistory {
 
     public List<JobHistory> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM JobHistory", JobHistory.class).getResultList();
 
@@ -26,7 +26,7 @@ public class DBJobHistory {
     public JobHistory read(Integer employeeId, Date startDate) {
         JobHistoryCompositeKey key = new JobHistoryCompositeKey(employeeId, startDate);
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(JobHistory.class, key);
 
@@ -43,7 +43,7 @@ public class DBJobHistory {
         Transaction transaction = null;
         JobHistoryCompositeKey key = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -66,7 +66,7 @@ public class DBJobHistory {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -86,7 +86,7 @@ public class DBJobHistory {
         JobHistoryCompositeKey key = new JobHistoryCompositeKey(employeeId, date);
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

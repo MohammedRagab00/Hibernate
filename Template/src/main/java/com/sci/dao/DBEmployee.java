@@ -18,7 +18,7 @@ import java.util.List;
 public class DBEmployee {
     public List<Employee> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Employee> cr = cb.createQuery(Employee.class);
@@ -120,7 +120,7 @@ public class DBEmployee {
 
     public List<Employee> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Employee", Employee.class).getResultList();
 
@@ -133,7 +133,7 @@ public class DBEmployee {
 
     public Employee read(Integer employeeId) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Employee.class, employeeId);
 
@@ -150,7 +150,7 @@ public class DBEmployee {
         Transaction transaction = null;
         int employeeId = 0;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -173,7 +173,7 @@ public class DBEmployee {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -193,7 +193,7 @@ public class DBEmployee {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

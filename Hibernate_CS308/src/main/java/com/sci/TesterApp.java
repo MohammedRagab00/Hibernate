@@ -1,12 +1,11 @@
 package com.sci;
 
-import com.sci.criteria.FilterQuery;
-import com.sci.criteria.Operator;
 import com.sci.dao.DBConfig;
 import com.sci.dao.GenericDAO;
 import com.sci.models.*;
+import jakarta.persistence.Query;
+import org.hibernate.Session;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -55,6 +54,28 @@ public class TesterApp {
                     employee.getSalary());
         }
 
+        testQueryCache();
+
         DBConfig.shutdown();
+    }
+
+    private static void testQueryCache() {
+        System.out.println("---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----");
+
+        Session session = DBConfig.getSessionFactory().openSession();
+
+        Query query1 = session.createQuery("from Employee where employeeId = :id", Employee.class).setParameter("id", 101);
+        query1.setHint("org.hibernate.cacheable", Boolean.TRUE);
+        Employee employee1 = (Employee) query1.getSingleResult();
+        System.out.println(employee1.getFirstName() + ' ' + employee1.getLastName());
+
+        System.out.println("---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----");
+
+        Query query2 = session.createQuery("from Employee where employeeId = :id", Employee.class).setParameter("id", 101);
+        query2.setHint("org.hibernate.cacheable", Boolean.TRUE);
+        Employee employee2 = (Employee) query2.getSingleResult();
+        System.out.println(employee2.getFirstName() + ' ' + employee2.getLastName());
+
+        session.close();
     }
 }

@@ -19,7 +19,7 @@ import java.util.List;
 public class DBPrice {
     public List<Price> getByFilter(List<FilterQuery> filterQueries) {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             // To be edited in other relations CRUD OPs:
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Price> cr = cb.createQuery(Price.class);
@@ -121,7 +121,7 @@ public class DBPrice {
 
     public List<Price> get() {
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.createQuery("FROM Price", Price.class).getResultList();
 
@@ -135,7 +135,7 @@ public class DBPrice {
     public Price read(String roomNumber, String season, String weekday) {
         PriceCompositeKey key = new PriceCompositeKey(roomNumber, season, weekday);
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             return session.get(Price.class, key);
 
@@ -152,7 +152,7 @@ public class DBPrice {
         Transaction transaction = null;
         PriceCompositeKey key = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -175,7 +175,7 @@ public class DBPrice {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 
@@ -195,7 +195,7 @@ public class DBPrice {
 
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
 

@@ -23,7 +23,7 @@ public class GenericDAO<T, ID extends Serializable> {
     }
 
     public List<T> getAll(int offset, int limit) {
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             return session.createQuery("FROM " + entityClass.getSimpleName(), entityClass)
                     .setFirstResult(offset)
                     .setMaxResults(limit)
@@ -35,10 +35,10 @@ public class GenericDAO<T, ID extends Serializable> {
     }
 
     public Optional<T> read(ID id) {
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             return Optional.ofNullable(session.get(entityClass, id));
         } catch (Exception ex) {
-            logger.error("Error reading entity with ID: " + id, ex);
+            logger.error("Error reading entity with ID: {}", id, ex);
             return Optional.empty();
         }
     }
@@ -47,7 +47,7 @@ public class GenericDAO<T, ID extends Serializable> {
         Transaction transaction = null;
         ID id = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
             session.persist(entity);
@@ -67,7 +67,7 @@ public class GenericDAO<T, ID extends Serializable> {
     public void update(T entity) {
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
             session.merge(entity);
@@ -84,10 +84,14 @@ public class GenericDAO<T, ID extends Serializable> {
     public void delete(ID id) {
         Transaction transaction = null;
 
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
-            T entity = session.load(entityClass, id);
+/*
+            T entity = session.getReference(entityClass, id);
+            session.remove(entity);
+*/
+            T entity = session.find(entityClass, id);
             if (entity != null) {
                 session.remove(entity);
             }
@@ -97,12 +101,13 @@ public class GenericDAO<T, ID extends Serializable> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            logger.error("Error deleting entity with ID: " + id, ex);
+            logger.error("Error deleting entity with ID: {}", id, ex);
         }
     }
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     public List<T> findByFilter(List<FilterQuery> filterQueries, boolean useOr) {
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<T> criteriaQuery = cb.createQuery(entityClass);
             Root<T> root = criteriaQuery.from(entityClass);
@@ -143,7 +148,7 @@ public class GenericDAO<T, ID extends Serializable> {
                         predicates.add(root.get(query.getAttributeName()).in(inQuery));
                         break;
                     default:
-                        logger.warn("Unsupported filter operation: " + query.getOp());
+                        logger.warn("Unsupported filter operation: {}", query.getOp());
                         break;
                 }
             }
@@ -159,7 +164,7 @@ public class GenericDAO<T, ID extends Serializable> {
     }
 
     public List<T> findWithCustomPredicate(PredicateBuilder<T> predicateBuilder) {
-        try (Session session = DBConfig.SESSION_FACTORY.openSession()) {
+        try (Session session = DBConfig.getSessionFactory().openSession()) {
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<T> criteriaQuery = cb.createQuery(entityClass);
             Root<T> root = criteriaQuery.from(entityClass);
@@ -174,6 +179,7 @@ public class GenericDAO<T, ID extends Serializable> {
         }
     }
 
+    @FunctionalInterface
     public interface PredicateBuilder<T> {
         Predicate build(CriteriaBuilder cb, Root<T> root);
     }
